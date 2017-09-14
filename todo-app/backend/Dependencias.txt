@@ -1,0 +1,11 @@
+nom init -y
+
+npm i --save-dev body-parser@1.15.2 express@4.14.0 mongoose@4.7.0 node-restful@0.2.5 pm2@2.1.5 nodemon@1.11.0
+
+alterar package.json:
+- linha 5
+isso: "main": "index.js", para isso: "main": "src/loader.js",
+- linha 7
+isso: "test": "echo \"Error: no test specified\" && exit 1" 
+para isso: "dev": "nodemon",
+    "production": "pm2 start src/loader.js --name todo-app"
